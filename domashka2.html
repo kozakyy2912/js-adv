@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>domaxa2</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //1. Find the Longest Word in a String
+
+    /*
+    function findLongestWord(str) {
+      var long=str.split(' '), max, i;
+     
+      long.sort(function(a,b){
+        
+        return a.length - b.length;})
+
+    var max = long[long.length-1];
+    var resultlength = max.length;
+    return resultlength;
+
+
+    };
+
+     console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+     console.log(findLongestWord("The quick brown fox jumped over the lazy dog roman_kryvosh"));
+
+    */
+
+    // по Find the Longest Word in a String  
+    
+/*
+    function findLongestWord(str) {
+        var arr = str.split(' '),wordLong = 0;
+        
+        for (i=0; i<arr.length; i+=1){
+            if(arr[i].length > wordLong) {
+                wordLong = arr[i].length;
+            }//return wordLong;
+
+        }//console.log(wordLong);
+
+        arr = wordLong;
+        return arr;
+    }
+    console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+
+    */
+
+
+
+    //2 Title Case a Sentence Incomplete   *
+    /*
+
+    function  titleCase(str){
+      var arr = str.toLowerCase().split(' '),i;
+      for (i=0; i < arr.length; i+=1){
+        arr[i] = arr[i].charAt(0).toUpperCase()+ arr[i].substring(1);//slice(1); какая разница 
+                                                                      // между slice  и substring!!!
+      }console.log(arr.join(' '));
+    }
+    titleCase("I'm a little tea pot");
+    titleCase("I'm roma Kryvosh STUDENT in jS");
+
+    */
+
+
+
+    //3  Найдите среднее арифметическое 
+
+    /*
+    var arr = [12, 15, 20, 25, 59, 79];
+     sum = 0; 
+
+    for(var i = 0; i<arr.length; i+=1){
+        sum += arr[i]/arr.length;
+    }
+    console.log(sum);
+
+
+    */
+
+
+
+    // 4. Дан массив с числами. Оставьте в нем только положительные числа. Затем извлеките квадратный корень и этих чисел
+    /*
+    var arr = [120, 65, -200, 250, 59, -59 ,40, -2, 10,1, -1, 2, -2, 3,-10,9,5];
+     function positiveNumber(){
+    var positiveArr = arr.filter(function(number){
+      return number > 0;
+
+    }); 
+    console.log(positiveArr);
+
+     squareNumber = positiveArr.map(function(num){
+      return Math.floor(Math.sqrt(num))
+     })
+    return squareNumber;
+    console.log(squareNumber);
+    }
+
+    console.log(positiveNumber());
+
+    */
+
+
+
+
+
+    // не как не могу добить!!! такой вариант!
+    /*
+        var arr = [120, 65, -200, 250, 59, -59, 40, -2, 10, 1, -1, 2, -2, 3, -10, 9, 5] ,i=0;
+      
+
+            for (i; i < arr.length; i+=1) {
+                if (arr[i] > 0) {
+                  
+              pologit_sqr_Mass = arr.map(function(num) {
+                return Math.floor(Math.sqrt(num))
+                  //return pologit_sqrMass;     
+          })
+           console.log(pologit_sqr_Mass);      
+        }
+        
+     }
+
+
+    */
+    </script>
+</body>
+
+</html>
