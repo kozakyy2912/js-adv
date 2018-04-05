@@ -32,20 +32,22 @@
 
 
     //посмотрел взял к сведению смотрю вроде понятно,а вот по этапно не очень!надеюсь
-    // на уроку обьясните особено:function sortArr(a, b) { return a - b };зачем оно.как именно оно влияет?!
+    // на уроке обьясните особено:function sortArr(a, b) { return a - b };зачем оно.как именно оно влияет?!
     /*
-        function largestOfFour(arr) {
+        
+   function largestOfFour(arr) {
+  
+   var newArr = arr, largestNumber;
 
-            var newArr = arr;
+   function sortArr(a,b) {return a - b};
 
-            
+  largestNumber = newArr.map(function(num){
+     return num.sort(sortArr).slice(num.length - 1);
+  });
 
-            newMass = newArr.map(function(num) {
-                return num.sort(sortArr).slice(num.length - 1);
+   return largestNumber;
+ }
 
-            });
-            return newMass;
-        }
         console.log(largestOfFour([[4, 5, 1, 3],[13, 27, 18, 26],[32, 35, 37, 39],[1000, 1001, 857, 1]]));
 
     */
@@ -100,6 +102,47 @@
     console.log(vizovF());
     console.log(vizovF());
 
+
+
+  // 2. Прочтитать что означает числа Фибоначчи. Написать на Javascript. Использовать цикл
+
+   function fib(n) {
+     var i, a = 1, b = 1, c, arr = [], num = [];
+     for(i = 3; i <= n; i += 1) {
+       c = a + b;
+       a = b;
+       b = c;
+       arr.push(i);
+       num.push(b);
+     }
+     console.log('Введенное число: ' + n);
+     console.log('Количество итераций: ' + arr.length);
+     console.log('Числа, вошедшие в итерации: ' + num);
+     return 'Результат Фибоначчи: ' + b;
+   }
+   console.log(fib(4));
+   console.log(fib(7));
+   console.log(fib(49));
+
+
+
+
+/***  числа Фибоначчи. Написать на Javascript. Использовать цикл. Фибоначчи вывести массивом  
+
+
+function fibonacchi(num) {
+    var sumFibonacci, numberOne, numberTwo, newArr = [], counter = 0, i;
+        for (i = 1; i <= num; i++) {
+            sumFibonacci = numberOne + numberTwo || 1;
+            numberOne = numberTwo;
+            numberTwo = sumFibonacci;
+            newArr.push(sumFibonacci);
+            counter++;
+        }
+    console.log(newArr);
+    console.log('Цикл сделал ' + counter + ' итераций')
+}
+fibonacchi(10);
 
 
 

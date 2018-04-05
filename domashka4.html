@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>domaska4</title>
+</head>
+<body>
+
+<input id="inp" type="text">
+   <button onclick="clon()">Clone</button>
+
+
+
+
+
+<form>
+	<input type="text" name="text" placeholder="Clone me!">
+</form>
+<button class="btn btn__clone" id="clickMe" onclick="clickButton()">Click me!</button> 
+
+
+
+
+
+
+<script type="text/javascript">
+// 7. Repeat a string repeat a string
+
+
+/*
+ function repeatStringNumTimes(str, num) {
+ 
+  var i, results = str;
+   if (num > 0) {
+     for(i = 2; i <= num; i +=1) {
+     results += str;
+   }
+   return results;
+   } else {
+     return '';
+   }
+
+ }
+
+ console.log(repeatStringNumTimes("abc", 3));
+ console.log(repeatStringNumTimes("abcde", 3));
+
+
+*/
+
+
+// 8. Truncate a string
+
+
+
+
+/*
+
+
+ function truncateString(str, num) {
+  
+   if(num === undefined || str.length <= num) {
+    
+     return str;
+
+   } else if(num <= 3) {
+     str = str.substr(0, num) + '...';
+     return str;
+   }
+
+   else if (num > 3){
+  
+    str = str.substr(0, num - 3) + '...';
+     return str;
+   }
+  
+ }
+
+ console.log(truncateString("A-tisket a-tasket A green and yellow basket", 11));
+
+
+
+  function truncateString(str, num) {
+        switch(true){
+            case num <= 3 : return str.slice(0, num) + '...'; break;
+            case str.length > num : return str.slice(0, num - 3) + '...'; break;
+            default: return str;
+        }
+    }
+    console.log(truncateString("A-tisket a-tasket A green and yellow basket", 11));
+
+
+*/
+
+
+
+//   1. Дан массив. Создайте ul через createElement, затем вставьте каждый элемент этого массива в отдельную li внутри этой ul, затем вставьте эту ul в конец body.   
+
+/*
+    var arr = ["qq", "ww", "ee", "rr", "tt"], ul, li, i;
+    function inputArrIn() {
+        ul = document.createElement('ul');
+        document.getElementsByTagName('body')[0].appendChild(ul);
+        for(i = 0; i < arr.length; i += 1){
+            li = document.createElement('li');
+            document.getElementsByTagName('ul')[0].appendChild(li);
+            li.innerHTML = arr[i];
+        }
+    }
+    inputArrIn();
+
+
+     var arr = [1, 2, 3, 4, 'Roma!'];
+         var ul = document.createElement('ul');
+           ul.className = 'block__ul';
+        
+
+           for(var i = 0; i < arr.length; i +=1) {
+             var li = document.createElement('li');
+           ul.appendChild(li);
+           li.className = 'item__li';
+             li.cloneNode(true);
+             li.appendChild(document.createTextNode(arr[i]));
+           }
+
+document.body.appendChild(ul);
+
+*/
+
+// Дан инпут. Дана кнопка. По нажатию на кнопку клонируйте этот инпут  
+
+/*
+    var inp, inpClone;
+    function clon(){
+        inp = document.getElementById('inp');
+        inpClone = inp.cloneNode(true);
+        document.body.appendChild(inpClone);
+    };
+
+
+
+    function clickButton(){
+
+       var form = document.querySelector('form');
+       var input = document.createElement('input');
+         form.appendChild(input);
+        
+     }
+
+
+*/
+
+// Дан массив с числами. Проверьте то, что в нем есть отрицательные элементы  
+
+/*
+    var arr = [1,3,6,5,-6,3,-22,-5];
+    function negative(){
+        return arr.some(function(n){
+            return n < 0;
+        });
+    };
+console.log(negative());
+
+
+
+
+    var i, result, arr = [1, 10, -56, 5, -45];
+
+    for (i = 0; i < arr.length; i += 1) {
+        (arr[i] < 0) ? result = true : result = false;
+     }
+
+     console.log(result);
+
+*/
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
