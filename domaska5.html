@@ -153,7 +153,7 @@ console.log(twoNum([1,3,1,5,,6,3,8,99]));
 */
 
 // 3. Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму его цифр.
-
+/*
     function getDigitsSum(digit) {
 
         var i, sum = digit;
@@ -191,6 +191,18 @@ console.log(getDigitsSum(52));
         return res;
     }
     console.log(getDigitsSum(1663));
+
+*/
+
+
+function getDigitsSum(num){
+ var strNum = num.toString(), i, sum = 0, size = strNum.length;
+for(i=0;i<size;i+=1){
+  sum+=+strNum[i];}
+  console.log(sum);
+  return sum;
+}
+getDigitsSum(52);
 
 </script>
 

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>domashka6</title>
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+	
+
+
+// 11. Mutations
+
+function mutation(arr) {
+
+var i, strFirst = arr.slice(0,1).join().toUpperCase(),
+        strSecond = arr.slice(1).join().toUpperCase();
+result = true;
+for(i = 0; i < strSecond.length; i +=1){
+  if(strFirst.indexOf(strSecond[i]) === -1) {
+    result = false;
+  } 
+}
+
+return result;
+
+} 
+console.log(mutation(["ssortlgtyyybvtuu", "Qrstu"]));
+
+
+
+function mutation(arr) {
+  var i, j,
+      first = arr[0].toLowerCase().split(''),
+      second = arr[1].toLowerCase().split(''),
+      size = second.length;
+  for(i = 0; i < size; i+=1){
+    if (first.indexOf(second[i]) === -1){
+     return false;
+   }
+  }
+    return true;
+}
+
+mutation(["hello", "hey"]);
+
+
+
+
+
+
+
+
+// 12. Falsy Bouncer
+/*
+ function bouncer(arr) {
+  
+  newArr = arr.filter(function(num){
+    return Boolean(num);
+  });
+  
+  return newArr;
+}
+
+bouncer([7, "ate", "", false, 9]);
+
+*/
+
+ function bouncer(arr) {
+ 	return arr.filter(Boolean);
+ }
+console.log(bouncer([7, "ate", "", false, 9]));
+
+
+
+
+
+
+
+
+
+
+
+//Everything Be True
+//Check if the predicate (second argument) is truthy on all elements of a collection (first argument).
+
+function truthCheck(collection, pre) {
+  var i, arr = collection, size = arr.length;
+  for(i = 0; i < size; i+=1){
+    if(!collection[i][pre]){
+      return false;
+    }
+  }
+  return true;
+}
+
+truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
+
+
+
+
+// 13. Everything Be True
+
+
+function truthCheck(collection, pre) {
+ var i;
+
+  for(i = 0; i < collection.length; i +=1) {
+      if(!(pre in collection[i]) || (collection[i][pre] === '') 
+          || (collection[i][pre] === 0) || 
+          (collection[i][pre] === undefined) || 
+          (collection[i][pre] === null) || 
+          collection[i][pre] !==  collection[i][pre] ){
+        return false;
+      }
+  }
+
+  return true;
+}
+
+console.log(truthCheck([{"user": "Tinky-Winky", "sex": "male"},
+                       {"user": "Dipsy", "sex": "male"},
+                       {"user": "Laa-Laa", "sex": "female"}, 
+                       {"user": "Po", "sex": "female"}], "sex"));
+
+
+
+
+function truthCheck(collection, pre) {
+        var i = 0, size = collection.length;
+        for(; i < size; i += 1){
+            if(!collection[i][pre]){
+                return false;
+            }
+        }
+        return true;
+    }
+    console.log(truthCheck([{"user": "Tinky-Winky"}, 
+    	{"user": "Dipsy", "sex": "male"}, 
+    	{"user": "Laa-Laa", "sex": "female"},
+    	{"user": "Po", "sex": "female"}], "sex"));
+
+
+    
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

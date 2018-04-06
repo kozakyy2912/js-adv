@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>domashka7</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+/*
+//Seek and Destroy
+
+function destroyer(arr) {
+	var arrOfArgs = Array.prototype.slice.call(arguments);
+
+	return arr.filter(function (elem) {
+		return !arrOfArgs.includes(elem);
+	});
+}
+
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+console.log(destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3));
+console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5));
+console.log(destroyer([2, 3, 2, 3], 2, 3));
+console.log(destroyer(["tree", "hamburger", 53], "tree", 53));
+
+*/
+
+/*
+//Where do I belong
+
+function getIndexToIns(arr, num) {
+	arr.push(num);
+	return arr.sort(function (a, b) {
+		return a - b;
+	}).indexOf(num);
+}
+
+console.log(getIndexToIns([40, 60], 50));
+console.log(getIndexToIns([10, 20, 30, 40, 50], 30));
+console.log(getIndexToIns([10, 20, 30, 40, 50], 35));
+console.log(getIndexToIns([3, 10, 5], 3));
+console.log(getIndexToIns([5, 3, 20, 3], 5));
+console.log(getIndexToIns([2, 20, 10], 19));
+console.log(getIndexToIns([2, 5, 10], 15));
+
+
+// 15. Where do I belong
+
+  function getIndexToIns(arr, num) {
+  var numWhole = Math.floor(num), 
+      result;
+      function sortNum(a,b){ return a - b; }
+      arr.push(numWhole);
+      arr.sort(sortNum);
+      result = arr.indexOf(numWhole);
+    
+      
+
+  return result;
+}
+
+
+
+*/
+
+
+//Sum All Numbers in a Range
+
+
+/*
+function sumAll(arr) {
+	var i,
+		sum = 0;
+	arr = arr.sort(function (a, b) {
+		return a - b;
+	});
+
+	for (i = arr[0]; i <= arr[1]; i += 1) {
+		sum += i;
+	}
+
+	return sum;
+}
+
+console.log(sumAll([1, 4]));
+console.log(sumAll([4, 1]));
+console.log(sumAll([5, 10]));
+console.log(sumAll([10, 5]));
+
+
+*/
+
+
+/*
+// 16. Sum All Numbers in a Range Complete 
+
+  function sumAll(arr) {
+  var i,
+      result,
+      funArr = arr,
+      newArr = [];
+
+      function getMaxOfArray(funArr) {
+        return Math.max.apply(null, funArr);
+      }
+      function getMinOfArray(funArr) {
+        return Math.min.apply(null, funArr);
+      }
+
+      for(i = getMinOfArray(funArr); i <= getMaxOfArray(funArr); i += 1){
+        newArr.push(i);
+      }
+      
+  result = newArr.reduce(function(sum, number){
+    return sum + number;
+  });
+  return result;
+}
+
+console.log(sumAll([1, 4]));
+
+*/
+
+
+// доп. задание калькулятор
+
+    function Culculator(a, b) {
+
+      this.doAddition = function() {
+        return a + b ;
+      };
+      this.doSubtraction = function() {
+        return a - b ;
+      };
+      this.doMultiply = function() {
+        return a * b;
+      };
+      this.doDivision = function() {
+        return a / b;
+      };
+
+    }
+
+    var arg = new Culculator(4, 3); 
+    console.log(arg.doMultiply()); 
+
+/////////////
+
+    function Calculator(a, b){
+	this.a = a;
+	this.b = b;
+}
+
+Calculator.prototype.sum = function(){ //summation
+	return this.a + this.b;
+}
+
+Calculator.prototype.mult = function(){ //multiplication
+	return this.a * this.b;
+}
+
+Calculator.prototype.sub = function(){ //substruction
+	return this.a - this.b;
+}
+
+Calculator.prototype.div = function(){ //division
+	return this.a / this.b;
+}
+
+var calculator = new Calculator(7, 5);
+alert(calculator.sum());
+alert(calculator.mult());
+alert(calculator.sub());
+alert(calculator.div());
+
+
+</script>
+</body>
+</html>
